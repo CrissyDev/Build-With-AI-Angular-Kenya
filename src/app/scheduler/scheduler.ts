@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { AiService } from '../ai.service';
+import { AiService } from '../ai.service'
 
 @Component({
   selector: 'app-scheduler',
