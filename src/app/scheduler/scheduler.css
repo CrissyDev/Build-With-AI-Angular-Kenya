@@ -1,84 +1,111 @@
 body {
-    background: #f5f7fb;
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f6;
   }
   
-  .container {
-    max-width: 500px;
-    margin: 50px auto;
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  .overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
   
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+  .modal {
+    width: 350px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   }
   
-  .form-group {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header h3 {
+    margin: 0;
+  }
+  
+  .close {
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+    margin-top: 15px;
   }
   
+  label {
+    font-size: 13px;
+    color: #555;
+  }
+
   input {
     padding: 10px;
     border-radius: 8px;
-    border: 1px solid #ddd;
-    font-size: 14px;
+    border: none;
+    background: #f2f2f2;
   }
   
-  button {
-    padding: 10px;
+  .type-buttons {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .type-buttons button {
+    flex: 1;
+    padding: 8px;
     border: none;
     border-radius: 8px;
-    background: #4CAF50;
-    color: white;
-    font-weight: bold;
+    background: #eee;
     cursor: pointer;
-    transition: 0.2s;
   }
   
-  button:hover {
-    background: #43a047;
+  .type-buttons .active {
+    background: #ddd;
+    font-weight: bold;
+  }
+  
+  .switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .confirm-btn {
+    margin-top: 10px;
+    background: #5b2eff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .confirm-btn:hover {
+    background: #4a24d6;
   }
   
   .ai-btn {
-    margin-top: 20px;
-    width: 100%;
-    background: #6c63ff;
-  }
-  
-  .ai-btn:hover {
-    background: #5a52e0;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-  }
-  
-  li {
-    background: #f9f9f9;
+    margin-top: 10px;
+    background: #000;
+    color: white;
+    border: none;
     padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
+    border-radius: 10px;
+    cursor: pointer;
   }
   
-  li small {
-    color: #888;
-  }
-  
-  .reminder-box {
-    margin-top: 20px;
-    padding: 15px;
-    background: #eef2ff;
-    border-left: 4px solid #6c63ff;
+  .ai-box {
+    margin-top: 15px;
+    padding: 10px;
+    background: #f0f0ff;
+    border-left: 4px solid #5b2eff;
     border-radius: 8px;
   }

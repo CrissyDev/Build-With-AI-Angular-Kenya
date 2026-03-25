@@ -1,18 +1,53 @@
-<div class="container">
-    <h2>Smart Task Scheduler </h2>
+<div class="overlay">
+    <div class="modal">
   
-    <input [(ngModel)]="task" placeholder="Enter task..." />
-    <input type="date" [(ngModel)]="date" />
+      <div class="header">
+        <h3>Schedule your meeting</h3>
+        <span class="close">×</span>
+      </div>
   
-    <button (click)="addTask()">Add Task</button>
+      <div class="form">
   
-    <ul>
-      <li *ngFor="let t of tasks">
-        {{ t.task }} - {{ t.date }}
-      </li>
-    </ul>
+        <label>Name</label>
+        <input [(ngModel)]="name" placeholder="Enter your name" />
   
-    <button (click)="generateReminder()">Get AI Reminder</button>
+        <label>Email</label>
+        <input [(ngModel)]="email" placeholder="Enter your email" />
   
-    <p><strong>AI Reminder:</strong> {{ reminder }}</p>
+        <label>Type</label>
+        <div class="type-buttons">
+          <button [class.active]="type==='Event'" (click)="type='Event'">Event</button>
+          <button [class.active]="type==='Meet'" (click)="type='Meet'">Meet</button>
+          <button [class.active]="type==='Tasks'" (click)="type='Tasks'">Tasks</button>
+        </div>
+  
+        <label>Date</label>
+        <input type="date" [(ngModel)]="date" />
+  
+        <label>Choose time</label>
+        <input type="time" [(ngModel)]="time" />
+  
+        <div class="switch">
+          <span>Set Reminder</span>
+          <input type="checkbox" [(ngModel)]="reminderEnabled" />
+        </div>
+  
+        <div class="switch">
+          <span>24 Hour Format</span>
+          <input type="checkbox" [(ngModel)]="is24Hour" />
+        </div>
+  
+        <button class="confirm-btn" (click)="addTask()">Confirm</button>
+  
+        <button class="ai-btn" (click)="generateReminder()">
+           Generate AI Reminder
+        </button>
+  
+        <div class="ai-box" *ngIf="aiReminder">
+          <strong>AI Reminder:</strong>
+          <p>{{ aiReminder }}</p>
+        </div>
+  
+      </div>
+    </div>
   </div>
