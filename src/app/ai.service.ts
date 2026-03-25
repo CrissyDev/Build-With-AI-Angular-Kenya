@@ -3,7 +3,7 @@ import axios from 'axios';
 
 @Injectable({ providedIn: 'root' })
 export class AiService {
-  apiKey = 'AIzaSyAEmMA0EAt-fnWcgt3m3bjb-Neckc3Gbo0';
+  apiKey = 'AIzaSyC--psLKvCPDA1xqM9SnlzDRDuLmCEG0eQ';
 
   async getReminder(tasks: any[]) {
     const prompt = `Here are my tasks: ${JSON.stringify(tasks)}.

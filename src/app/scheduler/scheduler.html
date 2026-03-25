@@ -40,7 +40,7 @@
         <button class="confirm-btn" (click)="addTask()">Confirm</button>
   
         <button class="ai-btn" (click)="generateReminder()">
-           Generate AI Reminder
+          Generate AI Reminder
         </button>
   
         <div class="ai-box" *ngIf="aiReminder">
@@ -49,5 +49,20 @@
         </div>
   
       </div>
+    </div>
+  </div>
+  
+  <div class="task-list" *ngIf="tasks.length > 0">
+    <h3>📋 Scheduled Tasks</h3>
+  
+    <div class="task-card" *ngFor="let t of tasks">
+      <div class="task-header">
+        <strong>{{ t.type }}</strong>
+        <span>{{ t.date }}</span>
+      </div>
+  
+      <p><strong>Name:</strong> {{ t.name }}</p>
+      <p><strong>Email:</strong> {{ t.email }}</p>
+      <p><strong>Time:</strong> {{ t.time }}</p>
     </div>
   </div>

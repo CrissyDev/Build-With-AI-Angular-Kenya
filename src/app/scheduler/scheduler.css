@@ -109,3 +109,40 @@ body {
     border-left: 4px solid #5b2eff;
     border-radius: 8px;
   }
+
+.task-list {
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  .task-list h3 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .task-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  }
+  
+  .task-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  .task-header strong {
+    background: #5b2eff;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+  }
+  
+  .task-header span {
+    color: #777;
+    font-size: 12px;
+  }
