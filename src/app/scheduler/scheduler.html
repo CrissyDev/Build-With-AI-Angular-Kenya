@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>Smart Task Scheduler </h2>
+  
+    <input [(ngModel)]="task" placeholder="Enter task..." />
+    <input type="date" [(ngModel)]="date" />
+  
+    <button (click)="addTask()">Add Task</button>
+  
+    <ul>
+      <li *ngFor="let t of tasks">
+        {{ t.task }} - {{ t.date }}
+      </li>
+    </ul>
+  
+    <button (click)="generateReminder()">Get AI Reminder</button>
+  
+    <p><strong>AI Reminder:</strong> {{ reminder }}</p>
+  </div>
