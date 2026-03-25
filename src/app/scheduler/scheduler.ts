@@ -7,9 +7,10 @@ import { AiService } from '../ai.service'
   selector: 'app-scheduler',
   standalone: true,
   imports: [FormsModule, CommonModule],
-  templateUrl: './scheduler.component.html',
+  templateUrl: './scheduler.html',
+  styleUrls: ['./scheduler.css'] 
 })
-export class SchedulerComponent {
+export class Scheduler {
   task = '';
   date = '';
   tasks: any[] = [];

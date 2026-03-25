@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Scheduler } from './scheduler/scheduler';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [Scheduler],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
